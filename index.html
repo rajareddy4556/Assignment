@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Popup</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<button id="myBtn">Open Popup</button>
+<div id="myModal" class="popup">
+  <div class="popup-content" style="text-align: center;">
+    <span class="close">&times;</span>
+    <div id="popup-content">
+        <button id="loginbtn" onclick="loginContent()">Log In</button>
+        <button id="signupbtn" onclick="signupContent()">Sign Up</button>
+        <br><br>
+        <div id="login-page">
+            <form>
+            <label for="name">Full Name <span style="color: red;">*</span></label>
+            <input type="text" required name="name" placeholder="Enter your username">
+            <br><br>
+            <label for="password">Password <span style="color: red;">*</span>&nbsp;</label>
+            <input type="password" required name="password" placeholder="Enter Your UserName">
+            <br>
+            <span style="display: inline-block;"><input type="checkbox">Remember Me <button type="button" style="border: 0;color: green;cursor: pointer;" onclick="forgotPassword()">Forgot Password?</button></span>
+            <br><br>
+            <input type="submit" value="Login" style="background-color: blue;color: white;width: 50%;cursor: pointer;" >
+            <br>
+            <p>Don't have an Account? <span><button type="button" style="border: 0;color: green;text-transform: uppercase;cursor: pointer;" onclick="signupContent()">Sign Up</button></span></p>
+        </form>
+        </div>
+        <div id="signup-page">
+            <form>
+            <label for="name">Full Name <span style="color: red;">*</span></label>
+            <input type="text" required name="name" placeholder="Enter your user name">
+            <br><br>
+            <label for="email">Email <span style="color: red;">*</span>&emsp;&emsp;</label>
+            <input type="email" name="email" required placeholder="Enter your email here">
+            <br><br>
+            <label for="password">Password <span style="color: red;">*</span>&nbsp;</label>
+            <input type="password" required name="password" placeholder="Enter your password">
+            <br><br>
+            <label for="contact">Contact <span style="color: red;">*</span>&nbsp;&nbsp;&nbsp;</label>
+            <div class="phone-container">
+            <span class="prefix" style="font-size: 15px;">+91 </span>
+            <input type="text" name="contact" required value=" " placeholder=" Enter Contact Number" id="contactInput">
+            </div>
+
+            <br><br><br>
+            <button type="button" id="back-btn" style="color: blue;border-radius: 5%;cursor: pointer;" onclick="loginContent()">&larr;Back</button>
+            <input type="submit" value="SAVE & VERIFY" style="background-color: blue;color: white;cursor: pointer;">
+            
+        </form>
+        </div>
+    </div>
+  </div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
