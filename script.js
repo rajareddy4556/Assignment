@@ -22,6 +22,7 @@ window.onload = function() {
   document.getElementById("login-page").style.display = "none";
   document.getElementById("signup-page").style.display = "none";
   document.getElementById('loginbtn').click();
+  document.getElementById("myBtn").click();
 }
 
 function loginContent() {
